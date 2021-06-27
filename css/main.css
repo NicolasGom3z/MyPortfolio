@@ -1,0 +1,6 @@
+body {
+  height: 100vh;
+  background: -webkit-gradient(linear, right top, left top, from(#243B55), to(#141E30));
+  background: linear-gradient(270deg, #243B55 0%, #141E30 100%);
+  /* fallback for old browsers */
+}/*# sourceMappingURL=main.css.map */
