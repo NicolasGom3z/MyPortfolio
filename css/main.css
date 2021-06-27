@@ -1,13 +1,20 @@
+body {
+  font-family: "MuseoModerno", cursive;
+  background-color: #FBFBFB;
+}
+
+img {
+  max-width: 100%;
+}
+
 a {
   text-decoration: none;
 }
 
 ul {
   list-style: none;
-}
-
-body {
-  font-family: "MuseoModerno", cursive;
+  padding: 0;
+  margin: 0;
 }
 
 .container {
@@ -22,7 +29,7 @@ header {
 }
 
 .nav-container {
-  padding: 15px 0;
+  padding-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,9 +76,74 @@ header {
   top: 0;
   left: 0;
 }
+.menu ul {
+  margin-right: 2rem;
+}
+.menu li {
+  display: inline-block;
+  padding: 1rem 2rem;
+}
+.menu li a {
+  color: #303030;
+}
+.menu li.contactar {
+  border: 3px solid #2D6C80;
+  border-radius: 50px;
+}
+.menu li.contactar a {
+  color: #2D6C80;
+}
 @media (min-width: 1024px) {
   .menu {
     display: block;
     position: inherit;
+    font-size: 1.8rem;
+  }
+}
+
+.hero-container .hero-background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -10;
+}
+.hero-container .hero h1 {
+  padding: 0;
+  margin: 0;
+  padding-top: 2rem;
+  font-size: 3rem;
+  text-align: center;
+  color: #303030;
+}
+@media (min-width: 1024px) {
+  .hero-container .hero h1 {
+    padding-top: 6rem;
+    font-size: 5rem;
+  }
+}
+.hero-container .hero blockquote {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  color: #4B4B4B;
+  font-size: 1.8rem;
+}
+@media (min-width: 1024px) {
+  .hero-container .hero blockquote {
+    font-size: 2.3rem;
+  }
+}
+.hero-container .hero .cita {
+  padding: 0;
+  margin: 0;
+  text-align: right;
+  color: #4B4B4B;
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+@media (min-width: 1024px) {
+  .hero-container .hero .cita {
+    font-size: 1.8rem;
+    padding-right: 15rem;
   }
 }/*# sourceMappingURL=main.css.map */
