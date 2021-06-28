@@ -28,7 +28,16 @@ ul {
   margin: 0 auto;
 }
 
+//* WELCOME
 
+.welcome {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/Back1.png);
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+}
 
 
 //* HEADER
@@ -36,7 +45,7 @@ ul {
 header{
   width: 100%;
   height: 11rem;
-  background-color:$ligth;
+  background-color:transparent;
 
 }
 .nav-container {
@@ -56,9 +65,10 @@ header{
     text-align: center;
     width: 7.5rem;
 
-    @include desktop(){
-      width: 10rem;
+    @include tablet(){
+      width: 12rem;
     }
+
   }
 
 }
@@ -70,6 +80,9 @@ header{
   i{
     font-size: 2rem;
     color: $blue;
+    @include tablet(){
+      font-size: 3rem;
+    }
   }
 
   @include desktop(){
@@ -90,12 +103,23 @@ header{
     padding: 1rem 2rem;
     a{
       color: $dark2 ;
+      &:hover{
+        color: $blue;
+      }
     }
     &.contactar{
       border: 3px solid $blue;
       border-radius: 50px;
+      transition: .2s ease-in;
+      &:hover{
+        background-color: $blue;
+        a{
+          color: $ligth;
+        }
+      }
       a{
         color: $blue;
+        transition: .2s ease-in;
       }
     }
   }
@@ -115,23 +139,33 @@ header{
     bottom: 0;
     left: 0;
     z-index: -10;
-    @include desktop(){
-      
-    }
   }
 
   .hero {
 
     h1 {
       @include resetSpace;
-      padding-top: 2rem;
+      margin: auto;
+      padding-top: 10%;
       font-size: 3rem;
+      word-break: keep-all;
+      width: 27rem;
       text-align: center;
       color: $dark2;
-      @include desktop(){
-        padding-top: 6rem;
-        font-size: 5rem;
+
+      @include custom(425){
+        width: 36.2rem
       }
+      @include custom(720){
+        width: 612px
+      }
+      @include tablet(){
+        font-size: 5rem
+      }
+      @include custom(1400){
+        width: auto
+      }
+
     }
     blockquote {
       @include resetSpace;
@@ -146,14 +180,40 @@ header{
       @include resetSpace;
       text-align: right;
       color: $dark;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       font-weight: 300;
       @include desktop(){
         font-size: 1.8rem;
-        padding-right: 15rem;
+        padding-right: 5%;
+      }
+      @include custom(1400){
+        padding-right: 10%;
+      }
+      @include custom(1660){
+        padding-right: 18%;
       }
     }
 
+  }
+
+}
+
+.arrow {
+  text-align: center;
+  position: fixed;
+  bottom: 2rem;
+  right: 50%;
+  transform: translateX(50%);
+
+
+  p{
+    @include resetSpace;
+    opacity: .6;
+  }
+
+  i{
+    font-size: 2rem;
+    opacity: .6;
   }
 }
 
