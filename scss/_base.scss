@@ -254,12 +254,11 @@ header{
 
 .cards-container{
   border-radius: 20px;
-  padding: 10% 5%;
-  padding-top: 10%;
+  padding: 5% 0;
   width: 85%;
   background-color: $ligth;
-  border: 0.2px solid $dark;
   text-align: center;
+  border: 1px solid $dark;
 
   h3{
     @include resetSpace;
@@ -279,7 +278,13 @@ header{
       color: $blue;
       font-weight: 700;
     }
+  }
+  .skill-card {
+    padding:10% 5%;
 
-
+    &.frontend{
+      border-top: 1px solid $dark;
+      border-bottom: 1px solid $dark  ;
+    }
   }
 }
