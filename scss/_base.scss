@@ -3,16 +3,23 @@
 
 //* GLOBAL
 
+
+body {
+  font-family: 'MuseoModerno', cursive;
+  background-color: $ligth;
+}
+
+img{
+  max-width: 100%;
+}
+
 a {
   text-decoration: none;
 }
 
 ul {
   list-style: none;
-}
-
-body {
-  font-family: 'MuseoModerno', cursive;
+  @include resetSpace;
 }
 
 .container {
@@ -22,16 +29,28 @@ body {
 
 
 
+//? WELCOME ############
+
+.welcome {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/Back1.png);
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+}
+
 
 //* HEADER
 
 header{
   width: 100%;
   height: 11rem;
-  background-color:$ligth;
+  background-color:transparent;
+
 }
 .nav-container {
-  padding: 15px 0;
+  padding-top: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,9 +66,10 @@ header{
     text-align: center;
     width: 7.5rem;
 
-    @include desktop(){
-      width: 10rem;
+    @include tablet(){
+      width: 12rem;
     }
+
   }
 
 }
@@ -61,6 +81,9 @@ header{
   i{
     font-size: 2rem;
     color: $blue;
+    @include tablet(){
+      font-size: 3rem;
+    }
   }
 
   @include desktop(){
@@ -73,9 +96,190 @@ header{
   position: fixed;
   top: 0;
   left: 0;
-
+  ul{
+    margin-right: 2rem;
+  }
+  li{
+    display: inline-block;
+    padding: 1rem 2rem;
+    a{
+      color: $dark2 ;
+      &:hover{
+        color: $blue;
+      }
+    }
+    &.contactar{
+      border: 3px solid $blue;
+      border-radius: 50px;
+      transition: .2s ease-in;
+      &:hover{
+        background-color: $blue;
+        a{
+          color: $ligth;
+        }
+      }
+      a{
+        color: $blue;
+        transition: .2s ease-in;
+      }
+    }
+  }
   @include desktop(){
     display: block;
     position: inherit;
+    font-size: 1.8rem;
+  }
+}
+
+// * HERO
+
+.hero-container {
+
+  .hero-background{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -10;
+  }
+
+  .hero {
+
+    h1 {
+      @include resetSpace;
+      margin: auto;
+      padding-top: 5%;
+      font-size: 3rem;
+      word-break: keep-all;
+      width: 27rem;
+      text-align: center;
+      color: $dark2;
+
+      @include custom(425){
+        width: 36.2rem
+      }
+      @include custom(720){
+        width: 612px
+      }
+      @include tablet(){
+        font-size: 5rem;
+        padding-top: 10%;
+      }
+      @include custom(1400){
+        width: auto
+      }
+
+    }
+    blockquote {
+      @include resetSpace;
+      text-align: center;
+      color: $dark;
+      font-size: 1.8rem;
+      @include desktop(){
+        font-size: 2.3rem;
+      }
+    }
+    .cita{
+      @include resetSpace;
+      text-align: right;
+      color: $dark;
+      font-size: 1.4rem;
+      font-weight: 300;
+      @include desktop(){
+        font-size: 1.8rem;
+        padding-right: 5%;
+      }
+      @include custom(1400){
+        padding-right: 10%;
+      }
+      @include custom(1660){
+        padding-right: 18%;
+      }
+    }
+
+  }
+
+}
+
+.arrow {
+  text-align: center;
+  position: absolute;
+  bottom: 2rem;
+  right: 50%;
+  transform: translateX(50%);
+
+
+  p{
+    @include resetSpace;
+    opacity: .6;
+  }
+
+  i{
+    font-size: 2rem;
+    opacity: .6;
+  }
+}
+
+//? WELCOME-----############
+
+//? About me ##########
+
+.about-me{
+  width: 100%;
+  background:linear-gradient(270deg, #225262 0%, #161A1E 100%);
+  padding: 10%;
+  padding-bottom: 35%;
+  text-align: center;
+  h2{
+    @include resetSpace;
+    font-size: 2.2rem;
+    color: $ligth;
+  }
+  p{
+    color: $ligth;
+    font-size: 1.7rem;
+  }
+
+}
+
+//? About me ----------##########
+
+//? Skills #######
+
+.skills-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -5rem;
+}
+
+.cards-container{
+  border-radius: 20px;
+  padding: 10% 5%;
+  padding-top: 10%;
+  width: 85%;
+  background-color: $ligth;
+  border: 0.2px solid $dark;
+  text-align: center;
+
+  h3{
+    @include resetSpace;
+    padding-top: 5%;
+    color: $dark2;
+    font-size: 2rem;
+  }
+
+  p{
+
+    font-size: 1.8rem;
+    color: $dark;
+    &:nth-child(4){
+      color: $blue;
+    }
+    &:nth-child(5){
+      color: $blue;
+      font-weight: 700;
+    }
+
+
   }
 }

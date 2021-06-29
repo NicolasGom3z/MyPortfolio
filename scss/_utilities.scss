@@ -1,7 +1,8 @@
 
 //* Variables
 
-$dark : #4B4B4B;
+$dark : #30363E;
+$dark2 : #23272D;
 $ligth: #FBFBFB;
 $blue :#2D6C80;
 $degradado: linear-gradient(90deg, #225262 0%, #161A1E 100%);
@@ -9,6 +10,7 @@ $degradado: linear-gradient(90deg, #225262 0%, #161A1E 100%);
 $telefono: 480px;
 $tablet: 768px;
 $desktop:1024px;
+$desktopL:1200px;
 
 
 //* Mixins
@@ -30,6 +32,17 @@ $desktop:1024px;
 }
 @mixin desktop {
   @media (min-width: #{$desktop} ) {
+    @content;
+  }
+}
+@mixin desktopL {
+  @media (min-width: #{$desktopL} ) {
+    @content;
+  }
+}
+
+@mixin custom($size){
+  @media (min-width: #{$size}px){
     @content;
   }
 }
