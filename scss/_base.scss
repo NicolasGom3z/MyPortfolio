@@ -4,7 +4,6 @@
 //* GLOBAL
 
 
-
 body {
   font-family: 'MuseoModerno', cursive;
   background-color: $ligth;
@@ -28,7 +27,9 @@ ul {
   margin: 0 auto;
 }
 
-//* WELCOME
+
+
+//? WELCOME ############
 
 .welcome {
   width: 100%;
@@ -146,7 +147,7 @@ header{
     h1 {
       @include resetSpace;
       margin: auto;
-      padding-top: 10%;
+      padding-top: 5%;
       font-size: 3rem;
       word-break: keep-all;
       width: 27rem;
@@ -160,7 +161,8 @@ header{
         width: 612px
       }
       @include tablet(){
-        font-size: 5rem
+        font-size: 5rem;
+        padding-top: 10%;
       }
       @include custom(1400){
         width: auto
@@ -200,7 +202,7 @@ header{
 
 .arrow {
   text-align: center;
-  position: fixed;
+  position: absolute;
   bottom: 2rem;
   right: 50%;
   transform: translateX(50%);
@@ -217,3 +219,67 @@ header{
   }
 }
 
+//? WELCOME-----############
+
+//? About me ##########
+
+.about-me{
+  width: 100%;
+  background:linear-gradient(270deg, #225262 0%, #161A1E 100%);
+  padding: 10%;
+  padding-bottom: 35%;
+  text-align: center;
+  h2{
+    @include resetSpace;
+    font-size: 2.2rem;
+    color: $ligth;
+  }
+  p{
+    color: $ligth;
+    font-size: 1.7rem;
+  }
+
+}
+
+//? About me ----------##########
+
+//? Skills #######
+
+.skills-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -5rem;
+}
+
+.cards-container{
+  border-radius: 20px;
+  padding: 10% 5%;
+  padding-top: 10%;
+  width: 85%;
+  background-color: $ligth;
+  border: 0.2px solid $dark;
+  text-align: center;
+
+  h3{
+    @include resetSpace;
+    padding-top: 5%;
+    color: $dark2;
+    font-size: 2rem;
+  }
+
+  p{
+
+    font-size: 1.8rem;
+    color: $dark;
+    &:nth-child(4){
+      color: $blue;
+    }
+    &:nth-child(5){
+      color: $blue;
+      font-weight: 700;
+    }
+
+
+  }
+}
